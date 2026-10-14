@@ -44,9 +44,9 @@ public class HelloController {
     private void onSumar() {
         int firstNumber = Integer.parseInt(this.getFirstNumber().getText());
         int secondNumber = Integer.parseInt(this.getSecondNumber().getText());
-
-
-    };
+        int suma = secondNumber + firstNumber;
+        this.getResultText().setText("" + suma);
+    }
 
     @FXML
     private void onRestar() {};
@@ -55,7 +55,17 @@ public class HelloController {
     private void onMultiplicar() {};
 
     @FXML
-    private void onDividir() {};
+    private void onDividir() {
+        int firstNumber = Integer.parseInt(this.getFirstNumber().getText());
+        int secondNumber = Integer.parseInt(this.getSecondNumber().getText());
+        int div;
+        try{
+            div = firstNumber / secondNumber;
+            this.getResultText().setText("" + div);
+        }catch (ArithmeticException ex){
+            this.getResultText().setText(" ¡No se puede dividir por cero!");
+        }
+    };
 
     @FXML
     private void onModulo() {};
