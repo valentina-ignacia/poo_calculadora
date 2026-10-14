@@ -49,16 +49,26 @@ public class HelloController {
     }
 
     @FXML
-    private void onRestar() {};
+    private void onRestar() {
+        int firstNumber = Integer.parseInt(this.getFirstNumber().getText());
+        int secondNumber = Integer.parseInt(this.getSecondNumber().getText());
+        int resta = firstNumber - secondNumber;
+        this.getResultText().setText("" + resta);
+    };
 
     @FXML
-    private void onMultiplicar() {};
+    private void onMultiplicar() {
+        int firstNumber = Integer.parseInt(this.getFirstNumber().getText());
+        int secondNumber = Integer.parseInt(this.getSecondNumber().getText());
+        int multi = secondNumber * firstNumber;
+        this.getResultText().setText("" + multi);
+    };
 
     @FXML
     private void onDividir() {
-        int firstNumber = Integer.parseInt(this.getFirstNumber().getText());
-        int secondNumber = Integer.parseInt(this.getSecondNumber().getText());
-        int div;
+        float firstNumber = Integer.parseInt(this.getFirstNumber().getText());
+        float  secondNumber = Integer.parseInt(this.getSecondNumber().getText());
+        float div;
         try{
             div = firstNumber / secondNumber;
             this.getResultText().setText("" + div);
@@ -68,5 +78,10 @@ public class HelloController {
     };
 
     @FXML
-    private void onModulo() {};
+    private void onModulo() {
+        int firstNumber = Integer.parseInt(this.getFirstNumber().getText());
+        int secondNumber = Integer.parseInt(this.getSecondNumber().getText());
+        int modu = firstNumber % secondNumber;
+        this.getResultText().setText("" + modu);
+    };
 }

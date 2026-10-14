@@ -3,6 +3,7 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <VBox alignment="CENTER" prefHeight="400.0" prefWidth="500.0" spacing="20.0" style="-fx-background-color: #FFD1DA;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="valentina.ignacia.poo_calculadora.HelloController">
     <padding>
@@ -13,42 +14,41 @@
          <VBox fx:id="" alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
             <children>
                <Label text="Número 1" />
-               <TextField fx:id="firstNumber" prefHeight="25.0" prefWidth="52.0" text="1" />
+               <TextField fx:id="firstNumber" alignment="CENTER" prefHeight="25.0" prefWidth="52.0" text="1" />
             </children>
          </VBox>
          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
             <children>
                <Label text="Número 2" />
-               <TextField fx:id="secondNumber" prefHeight="25.0" prefWidth="142.0" text="2" />
+               <TextField fx:id="secondNumber" alignment="CENTER" prefHeight="25.0" prefWidth="142.0" text="2" />
             </children>
          </VBox>
       </children>
    </HBox>
    <HBox alignment="CENTER" centerShape="false" prefHeight="25.0" prefWidth="360.0" spacing="15.0">
       <children>
-         <Button alignment="TOP_LEFT" lineSpacing="50.0" mnemonicParsing="false" onAction="#onSumar" text="Sumar" />
-         <Button alignment="TOP_LEFT" lineSpacing="50.0" mnemonicParsing="false" onAction="#onRestar" text="Restar" />
-         <Button alignment="TOP_LEFT" lineSpacing="50.0" mnemonicParsing="false" onAction="#onMultiplicar" text="Multiplicar" />
-         <Button alignment="TOP_LEFT" lineSpacing="50.0" mnemonicParsing="false" onAction="#onDividir" text="Dividir" />
-         <Button alignment="TOP_LEFT" lineSpacing="50.0" mnemonicParsing="false" onAction="#onModulo" text="Módulo" />
+         <Button alignment="TOP_LEFT" lineSpacing="50.0" mnemonicParsing="false" onAction="#onSumar" style="-fx-background-color: #ffb0b0; -fx-background-color: ;" text="Sumar" />
+         <Button alignment="TOP_LEFT" lineSpacing="50.0" mnemonicParsing="false" onAction="#onRestar" style="-fx-background-color: #ffd1d1;" text="Restar" />
+         <Button alignment="TOP_LEFT" lineSpacing="50.0" mnemonicParsing="false" onAction="#onMultiplicar" style="-fx-background-color: #ffe2e2;" text="Multiplicar" />
+         <Button alignment="TOP_LEFT" lineSpacing="50.0" mnemonicParsing="false" onAction="#onDividir" style="-fx-background-color: #ffbed8;" text="Dividir" />
+         <Button alignment="TOP_LEFT" lineSpacing="50.0" mnemonicParsing="false" onAction="#onModulo" style="-fx-background-color: #fe8cb7;" text="Módulo" />
       </children>
       <opaqueInsets>
          <Insets />
       </opaqueInsets>
    </HBox>
-   <HBox alignment="CENTER" blendMode="COLOR_BURN" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+   <HBox alignment="CENTER" blendMode="COLOR_BURN" prefHeight="100.0" prefWidth="200.0" spacing="50.0" style="-fx-background-color: clearpink;">
       <children>
-         <Label fx:id="resultText" style="-fx-background-color: #FF75A8;" text="Resultado" textFill="WHITE">
+         <Label fx:id="resultText" alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="95.0" style="-fx-background-color: #FF75A8; -fx-font-style: white;" text="Resultado" textFill="WHITE" HBox.hgrow="ALWAYS">
             <HBox.margin>
                <Insets />
             </HBox.margin>
             <padding>
                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-            </padding></Label>
-         <Label style="-fx-background-color: #FF75A8;" text="Resultado Valor" textFill="WHITE">
-            <padding>
-               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-            </padding></Label>
+            </padding>
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font></Label>
       </children>
    </HBox>
 </VBox>
